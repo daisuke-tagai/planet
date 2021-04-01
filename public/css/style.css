@@ -1,0 +1,273 @@
+.brand-content{
+  max-width: 230px;
+}
+
+.login-menu {
+  position: relative;
+  user-select: none;
+}
+
+.nav-hidden{
+    display:none;
+}
+
+.menubtn {
+  border-radius: 8px;
+}
+
+.menubtn img {
+  max-width: 32px;
+}
+
+.menubtn:hover {
+  background: rgb(240, 240, 240);
+  cursor: pointer;
+}
+
+.login-menu-item {
+  display: none;
+  background: white;
+  position: absolute;
+  top: 85%;
+  right: 0;
+  width: 130px;
+  height: 200px;
+  z-index: 999;
+  border: 3px solid #999;
+  border-radius: 4px;
+}
+
+.admin-menu {
+  left: 0;
+  height: 120px;
+}
+
+.login-menu-item li {
+  border-bottom: 1px solid #999;
+  text-align: center;
+}
+
+#nav-input:checked ~ #menubtn {
+    background: rgb(240, 240, 240);
+}
+#nav-input:checked ~ .login-menu-item {
+    display: block;
+    animation: 0.3s fadeIn;
+}
+
+#nav-input-admin:checked ~ #menubtn {
+    background: rgb(240, 240, 240);
+}
+#nav-input-admin:checked ~ .login-menu-item {
+    display: block;
+    animation: 0.3s fadeIn;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: #999999;
+}
+
+a:hover {
+  color: #650065;
+}
+
+main {
+  background: #CCCCCC;
+  padding-bottom: 64px;
+  animation-name: fadein;
+  animation-duration: 1s;
+}
+
+.categories {
+  height: 35px;
+  text-align: center;
+  
+}
+
+.category{
+  width: 90px;
+  color: black;
+  user-select: none;
+  background: rgb(231, 231, 231);
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.category a:visited {
+  color: #000000;
+}
+
+.category:hover {
+  background: rgb(240, 240, 240);
+  border-radius: 4px;
+}
+
+.section {
+  padding: 24px;
+  margin-bottom: 24px;
+  animation-name: fadein;
+  animation-duration: 1s;
+}
+
+.card-header {
+  padding: 0;
+}
+
+.feature-header,
+.news-header {
+  background: #CCCCCC;
+  display: flex;
+  justify-content: space-between;
+}
+
+.features {
+  background: #CCCCCC;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+.swiper-container {
+  width: 800px;
+  height: 130px;
+  border-radius: 5px;
+
+}
+.swiper-pagination-bullet {
+  width: 13px !important;
+  height: 13px !important;
+}
+
+.swiper-button-prev {
+  border-right: 25px solid #252525a6;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  background-image: none;
+}
+
+.swiper-button-next {
+  border-left: 25px solid #252525a6;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  background-image: none;
+}
+
+.feature img {
+  box-shadow: 0px 3px 10px rgba(0,0,0,.8);
+  border-radius: 5px;
+  position: relative;
+}
+
+.feature img:hover{
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+
+.feature h5 {
+  color: rgb(255, 255, 255);
+  background: rgba(5, 5, 5, 0.096);
+  border-radius: 5px;
+  white-space: nowrap;
+  text-shadow: 5px 5px 5px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+
+.news-section {
+  animation-name: fadein;
+  animation-duration: 1s;
+}
+
+.news-border,
+.admin-nav {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.sub {
+  padding: 0px;
+  border: 0;
+  animation-name: fadein;
+  animation-duration: 1s;
+}
+
+.sub .card-header {
+  padding: 8px 16px;
+  color: rgb(228, 228, 228);
+  background: #727272;
+}
+
+.sub h5 {
+  margin: 0;
+}
+
+.sub .card-body {
+  padding: 16px;
+}
+
+.recommend-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info-header h1{
+  font-size: 32px;
+  border-bottom: 1px solid #727272;
+  padding: 8px;
+  margin-bottom: 24px;
+}
+
+.info-content h2 {
+  font-size: 25px;
+  background: #dfdfdf;
+  box-shadow: 4px 4px #00000063;
+  padding: 16px 24px;
+  border-left:5px solid #eb4f4f;
+  margin-bottom: 24px;
+}
+
+.info-content h3 {
+  font-size: 22px;
+  padding: 8px 16px;
+  border-left:5px solid #ebe94f;
+  margin-bottom: 8px;
+}
+
+.info-content p {
+  padding: 8px;
+  margin-bottom: 32px;
+}
+
+footer p {
+  color: #B2B2B2;
+  padding: 8px;
+}
+
+@keyframes fadein {
+from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
