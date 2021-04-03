@@ -1,3 +1,28 @@
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: #999999;
+}
+
+a:hover {
+  color: #650065;
+}
+
+.card-header {
+  padding: 0;
+}
+
+.section {
+  padding: 24px;
+  margin-bottom: 24px;
+  animation-name: fadein;
+  animation-duration: 1s;
+}
+
+/* レイアウト */
+
 .brand-content{
   max-width: 230px;
 }
@@ -37,48 +62,40 @@
   border-radius: 4px;
 }
 
-.admin-menu {
-  left: 0;
-  height: 120px;
-}
-
 .login-menu-item li {
   border-bottom: 1px solid #999;
   text-align: center;
 }
 
 #nav-input:checked ~ #menubtn {
-    background: rgb(240, 240, 240);
+  background: rgb(240, 240, 240);
 }
+
 #nav-input:checked ~ .login-menu-item {
-    display: block;
-    animation: 0.3s fadeIn;
+  display: block;
+  animation: 0.3s fadeIn;
 }
 
 #nav-input-admin:checked ~ #menubtn {
-    background: rgb(240, 240, 240);
+  background: rgb(240, 240, 240);
 }
+
 #nav-input-admin:checked ~ .login-menu-item {
-    display: block;
-    animation: 0.3s fadeIn;
+  display: block;
+  animation: 0.3s fadeIn;
 }
+
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-a:link {
-  color: black;
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-a:visited {
-  color: #999999;
+.footer p {
+  color: #B2B2B2;
+  padding: 8px;
 }
 
-a:hover {
-  color: #650065;
-}
-
+/* main */
 main {
   background: #CCCCCC;
   padding-bottom: 64px;
@@ -86,13 +103,13 @@ main {
   animation-duration: 1s;
 }
 
-.categories {
+/* カテゴリー */
+.category-bar {
   height: 35px;
   text-align: center;
-  
 }
 
-.category{
+.category-item{
   width: 90px;
   color: black;
   user-select: none;
@@ -101,26 +118,16 @@ main {
   border-radius: 4px;
 }
 
-.category a:visited {
+.category-item a:visited {
   color: #000000;
 }
 
-.category:hover {
+.category-item:hover {
   background: rgb(240, 240, 240);
   border-radius: 4px;
 }
 
-.section {
-  padding: 24px;
-  margin-bottom: 24px;
-  animation-name: fadein;
-  animation-duration: 1s;
-}
-
-.card-header {
-  padding: 0;
-}
-
+/* feature */
 .feature-header,
 .news-header {
   background: #CCCCCC;
@@ -133,15 +140,14 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  
 }
 
 .swiper-container {
   width: 800px;
   height: 130px;
   border-radius: 5px;
-
 }
+
 .swiper-pagination-bullet {
   width: 13px !important;
   height: 13px !important;
@@ -167,7 +173,7 @@ main {
   position: relative;
 }
 
-.feature img:hover{
+.feature img:hover {
   opacity: 0.6;
   transition-duration: 0.3s;
 }
@@ -188,16 +194,17 @@ main {
   padding:0;
 }
 
+/* ニュース */
 .news-section {
   animation-name: fadein;
   animation-duration: 1s;
 }
 
-.news-border,
-.admin-nav {
+.news-border {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
+/* sub */
 .sub {
   padding: 0px;
   border: 0;
@@ -228,7 +235,8 @@ main {
   flex-wrap: wrap;
 }
 
-.info-header h1{
+/* info */
+.info-header h1 {
   font-size: 32px;
   border-bottom: 1px solid #727272;
   padding: 8px;
@@ -256,18 +264,24 @@ main {
   margin-bottom: 32px;
 }
 
-footer p {
-  color: #B2B2B2;
-  padding: 8px;
+/* admin.home */
+
+.admin-menu {
+  left: 0;
+  height: 120px;
+}
+
+.admin-nav {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 @keyframes fadein {
-from {
+  from {
     opacity: 0;
     transform: translateY(20px);
-}
-to {
+  }
+  to {
     opacity: 1;
     transform: translateY(0);
-}
+  }
 }

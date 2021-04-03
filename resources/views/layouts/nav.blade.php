@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
-    <div class="categories d-flex col-md-6 pl-md-5 pl-3">
+    <div class="category-bar d-flex col-md-6 pl-md-5 pl-3">
       @foreach ($categories as $category)
-      <div class="category mx-1">
+      <div class="category-item mx-1">
         <a href="{{ route('posts.index', ['category_id' => $category->id]) }}">
           {{ $category->category_name }}
         </a>
@@ -10,11 +10,11 @@
       @endforeach
     </div>
 
-    <div class="categories d-none d-md-flex col-md-3 p-0 justify-content-end">
-      <div class="category mx-1">
+    <div class="category-bar d-none d-md-flex col-md-3 p-0 justify-content-end">
+      <div class="category-item mx-1">
         <a href="{{ route('feature.index') }}">特集一覧</a>
       </div>
-      <div class="category mx-1">
+      <div class="category-item mx-1">
         <a href="{{ route('posts.index') }}">記事一覧</a>
       </div>
     </div>

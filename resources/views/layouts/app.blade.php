@@ -169,7 +169,7 @@
         
         @yield('content')
 
-        <footer class="footer conteiner text-center p-3 m-0">
+        <footer class="footer conteiner text-center py-2">
             <a href="{{ route('info') }}"><i class="fas fa-play-circle mr-1"></i>利用規約</a>
             <p class="">Copyright &copy; 2021 Planet</p>
         </footer>
