@@ -43,8 +43,8 @@
                     <div class="card-body my-3 mx-md-3 p-1 p-md-3 rounded bg-white">
                        @include('layouts.posts_board')
                     </div>
-                    <div class=" categories">
-                        <div class="category mx-auto">
+                    <div class=" category-bar">
+                        <div class="category-item mx-auto">
                             <a href="{{ route('posts.index') }}">もっと見る</a>
                         </div>
                     </div>
