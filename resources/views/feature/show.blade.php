@@ -8,7 +8,7 @@
   <div class="container mt-4">
     <div class="row justify-content-center">
       <div class="col-md-9 p-md-4">
-        <div class="card-header feature-header">
+        <div class="card-header header">
           <h3 class="ml-md-5">{{ $feature->feature_name }}</h3>
           <a class="p-1" href="{{ route('feature.index') }}">特集一覧</a>
         </div>

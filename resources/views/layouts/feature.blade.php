@@ -1,4 +1,4 @@
-<div class="card-header feature-header mt-3">
+<div class="card-header header mt-3">
   <h3 class="ml-md-5">特集</h3>
 </div>
 <div class="card-body row">
