@@ -14,12 +14,19 @@ a:hover {
   padding: 0;
 }
 
+.header {
+  background: #CCCCCC;
+  display: flex;
+  justify-content: space-between;
+}
+
 .section {
   padding: 24px;
   margin-bottom: 24px;
   animation-name: fadein;
   animation-duration: 1s;
 }
+
 
 /* レイアウト */
 
@@ -128,13 +135,6 @@ main {
 }
 
 /* feature */
-.feature-header,
-.news-header {
-  background: #CCCCCC;
-  display: flex;
-  justify-content: space-between;
-}
-
 .features {
   background: #CCCCCC;
   display: flex;
