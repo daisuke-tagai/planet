@@ -2,14 +2,13 @@
 
 @section('content')
 
-
 <main class="pt-1">
   @include('layouts.nav')
 
-  <div class="container mt-4">
+  <div class="container mt-4 pt-2">
     <div class="row">
       <div class="col-md-9 px-md-4">
-        <div class="card-header news-header ">
+        <div class="card-header header">
           <h3 class="ml-md-5">
             @if(isset($category_id))
               {{ $category_name->category_name }}ニュース
@@ -27,11 +26,9 @@
             @elseif(isset($tag_name))
               <a href="{{ route('posts.index') }}">ニュース一覧</a>
             @endif
-
         </div>
         
-        
-        <div class="card-body mt-3 mb-5 mx-md-3 p-1 p-md-3 rounded bg-white ">
+        <div class="card-body mt-3 mb-5 mx-md-3 p-1 p-md-3 rounded bg-white">
           @if (session('status'))
           <div class="alert alert-success" role="alert">
             {{ session('status') }}
