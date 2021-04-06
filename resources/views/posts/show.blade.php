@@ -7,7 +7,7 @@
 
   <div class="container mt-4">
     <div class="row justify-content-center">
-      <div class="col-md-9 px-md-4">
+      <div class="col-lg-9 px-md-4">
 
         <div class="card-header header">
           <h3 class="ml-md-5">
