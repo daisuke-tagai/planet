@@ -112,7 +112,7 @@
                                 <img src="{{ url('/img/menu.png') }}" alt="">
                             </label>
                             <ul class="navbar-nav login-menu-item px-3 py-2">
-                                <li class="nav-item">
+                                <li class="nav-item mt-3">
                                     <a class="nav-link " href="{{ route('login') }}">{{ __('ログイン') }}</a>
                                 </li>
                                 @if (Route::has('register'))
@@ -158,6 +158,9 @@
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('users.show', Auth::user()->id) }}">投稿一覧</a>
                                 </li>
                             </ul>
                         </div>

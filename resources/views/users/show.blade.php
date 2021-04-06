@@ -7,8 +7,8 @@
 
   <div class="container mt-4">
     <div class="row justify-content-center">
-      <div class="col-md-9 px-md-4">
-        <div class="card-header news-header ">
+      <div class="col-lg-9 px-md-4">
+        <div class="card-header header ">
           <h3 class="ml-md-5">
             {{ $user->name }}の投稿
           </h3>
@@ -26,7 +26,31 @@
           {{ $posts->links() }}
         </div>
 
-        <div class="card-header feature-header mt-5">
+        @auth('admin')
+        <div class="text-center">
+          <form action="{{ route('users.destroy', $user->id) }}" method="POST">
+            @csrf
+            @method('delete')
+            <input type="submit" value="ユーザー退会" class="btn text-white btn-danger rounded mr-2 my-1"
+              onclick='return confirm("削除しますか？");'>
+          </form>
+        </div>
+        @endauth
+
+        @auth
+          @if( ( $user->id ) === ( Auth::user()->id ) )
+          <div class="text-center">
+            <form action="{{ route('users.destroy', $user->id) }}" method="POST">
+              @csrf
+              @method('delete')
+              <input type="submit" value="ユーザー退会" class="btn text-white btn-danger rounded mr-2 my-1"
+                onclick='return confirm("削除しますか？");'>
+            </form>
+          </div>
+          @endif
+        @endauth
+
+        <div class="card-header header mt-5">
           <h3 class="ml-3">特集</h3>
         </div>
         <div class="card-body row">

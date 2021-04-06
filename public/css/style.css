@@ -63,13 +63,14 @@ a:hover {
   top: 85%;
   right: 0;
   width: 130px;
-  height: 200px;
+  height: 220px;
   z-index: 999;
   border: 3px solid #999;
   border-radius: 4px;
 }
 
 .login-menu-item li {
+  font-size: 12px;
   border-bottom: 1px solid #999;
   text-align: center;
 }

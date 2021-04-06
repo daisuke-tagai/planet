@@ -74,7 +74,6 @@ class UserController extends Controller
             'categories' => $categories,
             'tags' => $tags,
             'features' => $features,
-
         ]);
     }
         
@@ -110,6 +109,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+        return redirect('/');
     }
 }
