@@ -4,7 +4,7 @@
 <main>
     <div class="container py-5">
         <div class="row justify-content-center">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body py-5">
                         <form method="POST" action="{{ route('login') }}">
@@ -55,12 +55,6 @@
                                     <button type="submit" class="btn btn-secondary">
                                         ログイン
                                     </button>
-    
-                                    @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            パスワードを忘れましたか？
-                                        </a>
-                                    @endif
                                 </div>
                             </div>
                         </form>

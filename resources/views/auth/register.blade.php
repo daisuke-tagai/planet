@@ -4,7 +4,7 @@
 <main>
     <div class="container py-5">
         <div class="row justify-content-center">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body">
                         <div class="my-4 border-bottom">
