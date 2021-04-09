@@ -15,8 +15,6 @@ class FeatureController extends Controller
     public function __construct()
     {
         $this->middleware('auth:admin')->only(['create', 'store', 'edit', 'update', 'delete']);
-        // 追加
-        // $this->middleware('can:update,post')->only(['edit', 'update', 'delete']);
     }
     /**
      * Display a listing of the resource.
@@ -27,11 +25,14 @@ class FeatureController extends Controller
     {
         $features = Feature::all();
 
-        $recommends = Article::find([13, 16, 19, 22]);
+        $recommend1 = Article::where('feature_id', 1)->first();
+        $recommend2 = Article::where('feature_id', 2)->first();
+        $recommend3 = Article::where('feature_id', 3)->first();
+        $recommend4 = Article::where('feature_id', 4)->first();
+        $recommends = collect([$recommend1, $recommend2, $recommend3, $recommend4]);
         $randoms = Article::inRandomOrder()->take(5)->get();
         $categories = Category::all();
         $tags = Tag::all();
-        // dd($features);
 
         return view('feature.index', [
             'features' => $features,
@@ -77,7 +78,6 @@ class FeatureController extends Controller
         $feature->id = $request->id;
         $feature->feature_name = $request->feature_name;
         $feature->image = basename($filename);
-
 
         $feature->save();
 
@@ -148,10 +148,8 @@ class FeatureController extends Controller
             $filename = '';
         }
 
-        // $feature->id = $request->id;
         $feature->feature_name = $request->feature_name;
         $feature->image = basename($filename);
-
 
         $feature->save();
 
