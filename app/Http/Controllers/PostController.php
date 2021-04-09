@@ -18,8 +18,6 @@ class PostController extends Controller
     public function __construct()
     {
         $this->middleware('auth')->only(['create', 'store', 'edit', 'update', 'delete']);
-        // 追加
-        // $this->middleware('can:update,post')->only(['edit', 'update', 'delete']);
     }
     /**
      * Display a listing of the resource.
@@ -32,26 +30,22 @@ class PostController extends Controller
         $q = \Request::query();
 
         $features = Feature::all();
-        // $recommends = Article::find([13, 16, 19, 22]);
+
         $recommend1 = Article::where('feature_id', 1)->first();
         $recommend2 = Article::where('feature_id', 2)->first();
         $recommend3 = Article::where('feature_id', 3)->first();
         $recommend4 = Article::where('feature_id', 4)->first();
-
         $recommends = collect([$recommend1, $recommend2, $recommend3, $recommend4]);
-        // dd($recommends);
 
         $randoms = Article::inRandomOrder()->take(5)->get();
         $categories = Category::all();
         $tags = Tag::all();
-
         
         if(isset($q['category_id'])) {
             $posts = Post::latest()->where('category_id', $q['category_id'])->paginate(20);
             $posts->load('category', 'user', 'tags');
 
             $category_name = Category::find($q['category_id']);
-
             
             return view('posts.index', [
                 'posts' => $posts,
@@ -163,7 +157,11 @@ class PostController extends Controller
     {
         $post->load('category', 'user', 'comments.user');
         $features = Feature::all();
-        $recommends = Article::find([13, 16, 19, 22]);
+        $recommend1 = Article::where('feature_id', 1)->first();
+        $recommend2 = Article::where('feature_id', 2)->first();
+        $recommend3 = Article::where('feature_id', 3)->first();
+        $recommend4 = Article::where('feature_id', 4)->first();
+        $recommends = collect([$recommend1, $recommend2, $recommend3, $recommend4]);
         $randoms = Article::inRandomOrder()->take(5)->get();
         $categories = Category::all();
         $tags = Tag::all();
@@ -266,7 +264,6 @@ class PostController extends Controller
         $categories = Category::all();
         $tags = Tag::all();
         $features = Feature::all();
-
 
         return view('posts.index', [
             'posts' => $posts,
