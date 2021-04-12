@@ -7,8 +7,8 @@
 
   <div class="container mt-4">
     <div class="row justify-content-center">
-      <div class="col-lg-9 px-md-4">
-        <div class="card-header header">
+      <div class="col-md-9 px-md-4">
+        <div class="card-header feature-header">
           <a href="{{ route('feature.show', $article->feature_id) }}">
             <h3 class="ml-md-5">{{ $article->feature->feature_name }}</h3>
           </a>
