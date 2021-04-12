@@ -66,7 +66,6 @@ class ArticleController extends Controller
         $article->save();
 
         return redirect('/feature');
-
     }
 
     /**
@@ -89,22 +88,8 @@ class ArticleController extends Controller
                 ->orderBy('id')
                 ->first();
 
-        $recommend1 = Article::where('feature_id', 1)->first();
-        $recommend2 = Article::where('feature_id', 2)->first();
-        $recommend3 = Article::where('feature_id', 3)->first();
-        $recommend4 = Article::where('feature_id', 4)->first();
-        $recommends = collect([$recommend1, $recommend2, $recommend3, $recommend4]);
-        $randoms = Article::inRandomOrder()->take(5)->get();
-        $tags = Tag::all();
-        $categories = Category::all();
-
-
         return view('articles.show', [
             'article' => $article,
-            'recommends' => $recommends,
-            'randoms' => $randoms,
-            'tags' => $tags,
-            'categories' => $categories,
             'previous' => $previous,
             'next' => $next
             ]);
