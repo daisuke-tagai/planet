@@ -54,16 +54,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        $recommend1 = Article::where('feature_id', 1)->first();
-        $recommend2 = Article::where('feature_id', 2)->first();
-        $recommend3 = Article::where('feature_id', 3)->first();
-        $recommend4 = Article::where('feature_id', 4)->first();
-        $recommends = collect([$recommend1, $recommend2, $recommend3, $recommend4]);
-        $randoms = Article::inRandomOrder()->take(5)->get();
-        $categories = Category::all();
-        $tags = Tag::all();
         $features = Feature::all();
-
 
         $user = User::find($user->id);
         $posts = Post::where('user_id', $user->id)
@@ -72,10 +63,6 @@ class UserController extends Controller
         return view('users.show', [
             'user' => $user,
             'posts' => $posts,
-            'recommends' => $recommends,
-            'randoms' => $randoms,
-            'categories' => $categories,
-            'tags' => $tags,
             'features' => $features,
         ]);
     }
