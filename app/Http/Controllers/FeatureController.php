@@ -8,8 +8,6 @@ use App\Article;
 use App\Category;
 use App\Tag;
 
-
-
 class FeatureController extends Controller
 {
     public function __construct()
@@ -130,7 +128,6 @@ class FeatureController extends Controller
         $feature->save();
 
         return redirect('/admin/home');
-        
     }
 
     /**

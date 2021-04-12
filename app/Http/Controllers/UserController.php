@@ -5,11 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Post;
-use App\Tag;
-use App\Article;
-use App\Category;
 use App\Feature;
-
 
 use App\Http\Requests\PostRequest;
 
