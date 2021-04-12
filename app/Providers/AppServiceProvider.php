@@ -2,11 +2,10 @@
 
 namespace App\Providers;
 
-use App\Post;
 use App\Tag;
-use App\Feature;
 use App\Article;
 use App\Category;
+
 // use Doctrine\DBAL\Schema\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;

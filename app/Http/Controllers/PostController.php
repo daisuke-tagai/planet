@@ -11,8 +11,6 @@ use App\Feature;
 use App\Article;
 use App\Category;
 
-
-
 class PostController extends Controller
 {
     public function __construct()
@@ -118,7 +116,6 @@ class PostController extends Controller
         foreach ($tags as $tag) {
             array_push($tag_ids, $tag['id']);
         }
-        // dd($post);
         $post->save();
         $post->tags()->attach($tag_ids);
 
@@ -140,7 +137,6 @@ class PostController extends Controller
             'post' => $post,
             'features' => $features,
             ]);
-        
     }
 
     /**
@@ -167,7 +163,6 @@ class PostController extends Controller
      */
     public function update(PostRequest $request, $id)
     {
-        // $id = $request->post_id;
         $post = Post::findOrFail($id);
 
         if ($request->file('image')) {
@@ -195,7 +190,6 @@ class PostController extends Controller
         foreach ($tags as $tag) {
             array_push($tag_ids, $tag['id']);
         }
-        // dd($post);
         $post->save();
         $post->tags()->attach($tag_ids);
 
