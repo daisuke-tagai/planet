@@ -25,22 +25,9 @@ class FeatureController extends Controller
     {
         $features = Feature::all();
 
-        $recommend1 = Article::where('feature_id', 1)->first();
-        $recommend2 = Article::where('feature_id', 2)->first();
-        $recommend3 = Article::where('feature_id', 3)->first();
-        $recommend4 = Article::where('feature_id', 4)->first();
-        $recommends = collect([$recommend1, $recommend2, $recommend3, $recommend4]);
-        $randoms = Article::inRandomOrder()->take(5)->get();
-        $categories = Category::all();
-        $tags = Tag::all();
-
         return view('feature.index', [
             'features' => $features,
             'articles' => $articles,
-            'recommends' => $recommends,
-            'randoms' => $randoms,
-            'categories' => $categories,
-            'tags' => $tags
         ]);
     }
 
@@ -62,7 +49,6 @@ class FeatureController extends Controller
      */
     public function store(Request $request)
     {
-
         $request->validate([
             'feature_name' => 'required|string|max:255',
         ]);
@@ -96,19 +82,9 @@ class FeatureController extends Controller
         $articles = Article::where('feature_id', $feature->id) 
             ->get();
 
-        $recommends = Article::find([13, 16, 19, 22]);
-        $randoms = Article::inRandomOrder()->take(5)->get();
-        $tags = Tag::all();
-        $categories = Category::all();
-
-
         return view('feature.show', [
             'feature' => $feature,
             'articles' => $articles,
-            'recommends' => $recommends,
-            'randoms' => $randoms,
-            'tags' => $tags,
-            'categories' => $categories
         ]);
     }
 

@@ -31,16 +31,6 @@ class PostController extends Controller
 
         $features = Feature::all();
 
-        $recommend1 = Article::where('feature_id', 1)->first();
-        $recommend2 = Article::where('feature_id', 2)->first();
-        $recommend3 = Article::where('feature_id', 3)->first();
-        $recommend4 = Article::where('feature_id', 4)->first();
-        $recommends = collect([$recommend1, $recommend2, $recommend3, $recommend4]);
-
-        $randoms = Article::inRandomOrder()->take(5)->get();
-        $categories = Category::all();
-        $tags = Tag::all();
-        
         if(isset($q['category_id'])) {
             $posts = Post::latest()->where('category_id', $q['category_id'])->paginate(20);
             $posts->load('category', 'user', 'tags');
@@ -51,10 +41,6 @@ class PostController extends Controller
                 'posts' => $posts,
                 'category_id' => $q['category_id'],
                 'features' => $features,
-                'recommends' => $recommends,
-                'randoms' => $randoms,
-                'categories' => $categories,
-                'tags' => $tags,
                 'category_name' => $category_name,
                 ]);
                 
@@ -68,10 +54,6 @@ class PostController extends Controller
                 'posts' => $posts,
                 'tag_name' => $q['tag_name'],
                 'features' => $features,
-                'recommends' => $recommends,
-                'randoms' => $randoms,
-                'categories' => $categories,
-                'tags' => $tags,
                 'tag_name' => $tag_name
             ]);
         } else {
@@ -81,10 +63,6 @@ class PostController extends Controller
             return view('posts.index', [
                 'posts' => $posts,
                 'features' => $features,
-                'recommends' => $recommends,
-                'randoms' => $randoms,
-                'categories' => $categories,
-                'tags' => $tags
                 ]);
         }
     }
@@ -157,22 +135,10 @@ class PostController extends Controller
     {
         $post->load('category', 'user', 'comments.user');
         $features = Feature::all();
-        $recommend1 = Article::where('feature_id', 1)->first();
-        $recommend2 = Article::where('feature_id', 2)->first();
-        $recommend3 = Article::where('feature_id', 3)->first();
-        $recommend4 = Article::where('feature_id', 4)->first();
-        $recommends = collect([$recommend1, $recommend2, $recommend3, $recommend4]);
-        $randoms = Article::inRandomOrder()->take(5)->get();
-        $categories = Category::all();
-        $tags = Tag::all();
 
         return view('posts.show', [
             'post' => $post,
             'features' => $features,
-            'recommends' => $recommends,
-            'randoms' => $randoms,
-            'categories' => $categories,
-            'tags' => $tags,
             ]);
         
     }
@@ -186,11 +152,9 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::findOrFail($id);
-        $categories = Category::all();
 
         return view('posts.edit', [
             'post' => $post,
-            'categories' => $categories
             ]);
     }
 
@@ -259,20 +223,12 @@ class PostController extends Controller
 
         $search_result = $request->search.'の検索結果'.$posts->total().'件';
 
-        $recommends = Article::find([13, 16, 19, 22]);
-        $randoms = Article::inRandomOrder()->take(5)->get();
-        $categories = Category::all();
-        $tags = Tag::all();
         $features = Feature::all();
 
         return view('posts.index', [
             'posts' => $posts,
             'search_result' => $search_result,
             'search_query' => $request->search,
-            'recommends' => $recommends,
-            'randoms' => $randoms,
-            'categories' => $categories,
-            'tags' => $tags,
             'features' => $features,
         ]);
     }
