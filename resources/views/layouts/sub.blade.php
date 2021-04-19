@@ -66,7 +66,7 @@
           </div>
             <p class="m-1 p-2">経済、政治、世界情勢、社会を学びながらニュースを見れる情報サービスです。</p>
         </div>
-        <p class="mt-2 ml-2"><i class="fas fa-envelope mr-1"></i>planet@gmail.com</p>
+        <p class="mt-2 ml-2"><i class="fas fa-envelope mr-1"></i>planet-pulchrum@gmail.com</p>
       </div>
     </div>
   </div>
