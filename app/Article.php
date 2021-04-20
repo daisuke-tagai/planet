@@ -12,7 +12,7 @@ class Article extends Model
 
     public function feature()
     {
-        return $this->belongsTo(\App\feature::class, 'feature_id');
+        return $this->belongsTo(\App\Feature::class, 'feature_id');
     }
 
     public function getContentWithLinkAttribute(): string
