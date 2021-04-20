@@ -24,7 +24,7 @@
             @if (!empty($article->image))
             <img style="max-width: 100%" src="{{ asset('/storage/image/'.$article->image) }}">
             @endif
-            <p class="card-text">{!! nl2br($article->content_with_link) !!}</p>
+            <p class="card-text pt-4">{!! nl2br($article->content_with_link) !!}</p>
             
             <div class="my-5">
               <div class="d-flex justify-content-center">
