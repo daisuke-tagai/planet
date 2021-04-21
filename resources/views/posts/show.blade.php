@@ -29,7 +29,7 @@
             </div>
             @endif
             <div class="card-body p-1">
-              <p class="card-text">{!! nl2br($post->content_with_link) !!}</p>
+              <p class="card-text pt-3 px-lg-3">{!! nl2br($post->content_with_link) !!}</p>
 
               @if (!empty($post->image))
               <img style="max-width: 100%" src="{{ asset('/storage/image/'.$post->image) }}">
