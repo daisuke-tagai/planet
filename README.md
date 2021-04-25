@@ -1,4 +1,4 @@
-# Planet
+![image-logo](https://user-images.githubusercontent.com/77516643/115990607-20c5a780-a5ff-11eb-97fb-ecc5c424eba2.png)
 経済を学びながらニュースの閲覧、投稿、コメントができる
 ブログと掲示板の機能があるものを作成しました。
 <br>
@@ -8,7 +8,7 @@
   
 テストユーザーを用意してあります。  
 `test0011@test.com`  
-test0011  
+`test0011`  
 <br>
 
 ## 機能一覧
@@ -35,23 +35,28 @@ test0011
 レスポンシブ
 ![image-lg](https://user-images.githubusercontent.com/77516643/115987512-531bd880-a5f0-11eb-8c4b-0c1277e2ad53.png)
 <br>
-<img width="300" alt="image-sm" src="https://user-images.githubusercontent.com/77516643/115987487-413a3580-a5f0-11eb-9307-d502f2dbd77e.jpg">
+<br>
+<img width="400" alt="image-sm" src="https://user-images.githubusercontent.com/77516643/115987487-413a3580-a5f0-11eb-9307-d502f2dbd77e.jpg">
+<br>
 <br>
 
-
 * 管理者
-  *. 特集を選択、又は追加をして記事を投稿、編集、削除ができます。
-  *. カテゴリーの追加、編集、削除ができます。
-  *. ユーザー、コメントの削除ができます。
+  * 特集を選択、又は追加をして記事を投稿、編集、削除ができます。
+  * カテゴリーの追加、編集、削除ができます。
+  * ユーザー、コメントの削除ができます。
 ![image-admin](https://user-images.githubusercontent.com/77516643/115987551-78104b80-a5f0-11eb-9769-b866be9f6074.png)
+<br>
 <br>
 
 * ユーザー(ログイン時)
-  *. カテゴリーを選択しニュースを掲示板に投稿できます。
-  *. 投稿したものを編集、削除できます。
-  *. ニュースにコメントができます。
+  * カテゴリーを選択しニュースを掲示板に投稿できます。
+  * 投稿したものを編集、削除できます。
+  * ニュースにコメントができます。
 ![image-post](https://user-images.githubusercontent.com/77516643/115989888-8fa10180-a5fb-11eb-8c48-454657f394d8.png)
+<br>
+<br>
 ![image-comment](https://user-images.githubusercontent.com/77516643/115989911-ac3d3980-a5fb-11eb-928a-5217ae9ff876.png)
+<br>
 <br>
  
 ## 開発環境
