@@ -71,8 +71,8 @@
 <br>
  
 ## 開発環境
-* PHP:7.2-fpm
-* laravel
+* PHP:7.2
+* laravel:7.30
 * MySQL:8.0
 * nginx
 * Docker
