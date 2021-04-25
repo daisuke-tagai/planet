@@ -12,15 +12,15 @@ test0011
 
 ## 機能一覧
 * 管理者
- * 記事投稿(投稿、画像投稿、編集、削除)
- * 特集(特集追加、画像投稿、編集、削除)
- * コメント管理
- * ユーザー管理
+  * 記事投稿(投稿、画像投稿、編集、削除)
+  * 特集(特集追加、画像投稿、編集、削除)
+  * コメント管理
+  * ユーザー管理
 
 * ユーザー
- * ログイン機能(新規登録、削除)
- * 投稿(ニュース掲示板、画像投稿、編集、削除)
- * コメント投稿
+  * ログイン機能(新規登録、削除)
+  * 投稿(ニュース掲示板、画像投稿、編集、削除)
+  * コメント投稿
 
 * ニュース一覧表示(ユーザー別、カテゴリー別)
 * 検索機能(キーワードニュース検索)
@@ -30,19 +30,22 @@ test0011
 
 ## DEMO
 レスポンシブ
-![image-lg](https://github.com/daisuke-tagai/planet/issues/22#issue-866956780)
-![image-sm](https://github.com/daisuke-tagai/planet/issues/21#issue-866956564)
+![image-lg](https://user-images.githubusercontent.com/77516643/115987512-531bd880-a5f0-11eb-8c4b-0c1277e2ad53.png)
+![image-sm](https://user-images.githubusercontent.com/77516643/115987487-413a3580-a5f0-11eb-9307-d502f2dbd77e.jpg)
 
 * 管理者
- 1. 特集を選択、又は追加をして記事を投稿、編集、削除ができます。
- 2. カテゴリーの追加、編集、削除ができます。
- 3. ユーザー、コメントの削除ができます。
-![image-admin](https://github.com/daisuke-tagai/planet/issues/23#issue-866956942)
+  1. 特集を選択、又は追加をして記事を投稿、編集、削除ができます。
+  2. カテゴリーの追加、編集、削除ができます。
+  3. ユーザー、コメントの削除ができます。
+![image-admin](https://user-images.githubusercontent.com/77516643/115987551-78104b80-a5f0-11eb-9769-b866be9f6074.png)
 
 * ユーザー(ログイン時)
- 1. カテゴリーを選択しニュースを掲示板に投稿できます。
- 2. 投稿したものを編集、削除できます。
- 3. ニュースにコメントができます。
+  1. カテゴリーを選択しニュースを掲示板に投稿できます。
+  2. 投稿したものを編集、削除できます。
+  3. ニュースにコメントができます。
+![image-post](https://user-images.githubusercontent.com/77516643/115989888-8fa10180-a5fb-11eb-8c48-454657f394d8.png)
+![image-comment](https://user-images.githubusercontent.com/77516643/115989911-ac3d3980-a5fb-11eb-928a-5217ae9ff876.png)
+
  
 ## 開発環境
 * PHP:7.2-fpm
@@ -52,6 +55,6 @@ test0011
 * Docker
 
 * AWS
- * EC2
- * RDS
- * ROUTE53
+  * EC2
+  * RDS
+  * ROUTE53
