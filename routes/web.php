@@ -25,7 +25,7 @@ Route::prefix('admin')
 ->name('admin.')
 ->group(function() {
     Auth::routes([
-        'register' => false,
+        // 'register' => false,
         'reset' => false,
         'confirm' => false,
         'verify' => false,

@@ -7,8 +7,8 @@
 
   <div class="container mt-4">
     <div class="row justify-content-center">
-      <div class="col-md-9 px-md-4">
-        <div class="card-header feature-header">
+      <div class="col-lg-9 px-md-4">
+        <div class="card-header header">
           <a href="{{ route('feature.show', $article->feature_id) }}">
             <h3 class="ml-md-5">{{ $article->feature->feature_name }}</h3>
           </a>
@@ -24,7 +24,7 @@
             @if (!empty($article->image))
             <img style="max-width: 100%" src="{{ asset('/storage/image/'.$article->image) }}">
             @endif
-            <p class="card-text">{!! nl2br($article->content_with_link) !!}</p>
+            <p class="card-text pt-4">{!! nl2br($article->content_with_link) !!}</p>
             
             <div class="my-5">
               <div class="d-flex justify-content-center">

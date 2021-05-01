@@ -112,7 +112,7 @@
                                 <img src="{{ url('/img/menu.png') }}" alt="">
                             </label>
                             <ul class="navbar-nav login-menu-item px-3 py-2">
-                                <li class="nav-item">
+                                <li class="nav-item mt-3">
                                     <a class="nav-link " href="{{ route('login') }}">{{ __('ログイン') }}</a>
                                 </li>
                                 @if (Route::has('register'))
@@ -159,6 +159,9 @@
                                     @csrf
                                 </form>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('users.show', Auth::user()->id) }}">投稿一覧</a>
+                                </li>
                             </ul>
                         </div>
                         @endguest
@@ -169,7 +172,7 @@
         
         @yield('content')
 
-        <footer class="footer conteiner text-center p-3 m-0">
+        <footer class="footer conteiner text-center py-2">
             <a href="{{ route('info') }}"><i class="fas fa-play-circle mr-1"></i>利用規約</a>
             <p class="">Copyright &copy; 2021 Planet</p>
         </footer>

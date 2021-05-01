@@ -1,61 +1,84 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+![image-logo](https://user-images.githubusercontent.com/77516643/115990607-20c5a780-a5ff-11eb-97fb-ecc5c424eba2.png)
+<br>
+<br>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+経済を学びながらニュースの閲覧、投稿、コメントができる
+ブログと掲示板の機能があるものを作成しました。
+<br>
+<br>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## サイトURL
+[http://planet-pulchrum.com](http://planet-pulchrum.com/)
+  
+テストユーザーを用意してあります。  
+`test0011@test.com`  
+`test0011`  
+<br>
+<br>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 機能一覧
+* 管理者
+  * 記事投稿(投稿、画像投稿、編集、削除)
+  * 特集(特集追加、画像投稿、編集、削除)
+  * コメント管理
+  * ユーザー管理
+<br>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* ユーザー
+  * ログイン機能(新規登録、削除)
+  * 投稿(ニュース掲示板、画像投稿、編集、削除)
+  * コメント投稿
+  <br>
 
-## Learning Laravel
+* ニュース一覧表示(ユーザー別、カテゴリー別)
+* 検索機能(キーワードニュース検索)
+* タグ機能(タグ付け、タグ検索)
+* ページネーション
+* スクロール、スワイプ
+<br>
+<br>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## DEMO
+レスポンシブ
+![image-lg](https://user-images.githubusercontent.com/77516643/115987512-531bd880-a5f0-11eb-8c4b-0c1277e2ad53.png)
+<br>
+<br>
+<div align="center">
+<img width="400" alt="image-sm" src="https://user-images.githubusercontent.com/77516643/115987487-413a3580-a5f0-11eb-9307-d502f2dbd77e.jpg">
+</div>
+<br>
+<br>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* 管理者
+  * 特集を選択、又は追加をして記事を投稿、編集、削除ができます。
+  * カテゴリーの追加、編集、削除ができます。
+  * ユーザー、コメントの削除ができます。
+![image-admin](https://user-images.githubusercontent.com/77516643/115987551-78104b80-a5f0-11eb-9769-b866be9f6074.png)
+<br>
+<br>
 
-## Laravel Sponsors
+* ユーザー(ログイン時)
+  * カテゴリーを選択しニュースを掲示板に投稿できます。
+  * 投稿したものを編集、削除できます。
+  * ニュースにコメントができます。
+![image-post](https://user-images.githubusercontent.com/77516643/115989888-8fa10180-a5fb-11eb-8c48-454657f394d8.png)
+<br>
+<br>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+![image-comment](https://user-images.githubusercontent.com/77516643/115989911-ac3d3980-a5fb-11eb-928a-5217ae9ff876.png)
+<br>
+<br>
+ 
+## 開発環境
+* PHP:7.2
+* laravel:7.30
+* MySQL:8.0
+* nginx
+* Docker
+<br>
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* AWS
+  * EC2
+  * RDS
+  * ROUTE53

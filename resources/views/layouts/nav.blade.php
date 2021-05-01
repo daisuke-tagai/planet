@@ -1,8 +1,8 @@
 <div class="container">
-  <div class="row">
-    <div class="categories d-flex col-md-6 pl-md-5 pl-3">
+  <div class="row justify-content-between">
+    <div class="category-bar d-flex col-md-6 pl-lg-5 pl-3">
       @foreach ($categories as $category)
-      <div class="category mx-1">
+      <div class="category-item mx-1">
         <a href="{{ route('posts.index', ['category_id' => $category->id]) }}">
           {{ $category->category_name }}
         </a>
@@ -10,16 +10,16 @@
       @endforeach
     </div>
 
-    <div class="categories d-none d-md-flex col-md-3 p-0 justify-content-end">
-      <div class="category mx-1">
+    <div class="category-bar d-none d-md-flex col-md-3 p-0 justify-content-end">
+      <div class="category-item mx-1">
         <a href="{{ route('feature.index') }}">特集一覧</a>
       </div>
-      <div class="category mx-1">
+      <div class="category-item mx-1">
         <a href="{{ route('posts.index') }}">記事一覧</a>
       </div>
     </div>
 
-    <div id="custom-search-input" class="d-none d-md-block col-md-3">
+    <div id="custom-search-input" class="d-none d-lg-block col-md-3">
       <div class="input-group px-2">
         <form action="{{ route('posts.search') }}" method="get">
           @csrf
@@ -36,7 +36,7 @@
     </div>
   </div>
 </div>
-<div class="container d-md-none mt-2">
+<div class="container d-lg-none mt-2">
   <div class="input-group">
     <form action="{{ route('posts.search') }}" method="get" style="width: 100%">
       @csrf

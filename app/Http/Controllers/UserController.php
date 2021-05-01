@@ -5,11 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Post;
-use App\Tag;
-use App\Article;
-use App\Category;
 use App\Feature;
-
 
 use App\Http\Requests\PostRequest;
 
@@ -54,13 +50,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-
-        $recommends = Article::find([13, 16, 19, 22]);
-        $randoms = Article::inRandomOrder()->take(5)->get();
-        $categories = Category::all();
-        $tags = Tag::all();
         $features = Feature::all();
-
 
         $user = User::find($user->id);
         $posts = Post::where('user_id', $user->id)
@@ -69,12 +59,7 @@ class UserController extends Controller
         return view('users.show', [
             'user' => $user,
             'posts' => $posts,
-            'recommends' => $recommends,
-            'randoms' => $randoms,
-            'categories' => $categories,
-            'tags' => $tags,
             'features' => $features,
-
         ]);
     }
         
@@ -110,6 +95,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+        return redirect('/');
     }
 }

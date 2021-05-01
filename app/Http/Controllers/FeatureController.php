@@ -8,15 +8,11 @@ use App\Article;
 use App\Category;
 use App\Tag;
 
-
-
 class FeatureController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth:admin')->only(['create', 'store', 'edit', 'update', 'delete']);
-        // 追加
-        // $this->middleware('can:update,post')->only(['edit', 'update', 'delete']);
     }
     /**
      * Display a listing of the resource.
@@ -27,19 +23,9 @@ class FeatureController extends Controller
     {
         $features = Feature::all();
 
-        $recommends = Article::find([13, 16, 19, 22]);
-        $randoms = Article::inRandomOrder()->take(5)->get();
-        $categories = Category::all();
-        $tags = Tag::all();
-        // dd($features);
-
         return view('feature.index', [
             'features' => $features,
             'articles' => $articles,
-            'recommends' => $recommends,
-            'randoms' => $randoms,
-            'categories' => $categories,
-            'tags' => $tags
         ]);
     }
 
@@ -61,7 +47,6 @@ class FeatureController extends Controller
      */
     public function store(Request $request)
     {
-
         $request->validate([
             'feature_name' => 'required|string|max:255',
         ]);
@@ -77,7 +62,6 @@ class FeatureController extends Controller
         $feature->id = $request->id;
         $feature->feature_name = $request->feature_name;
         $feature->image = basename($filename);
-
 
         $feature->save();
 
@@ -96,19 +80,9 @@ class FeatureController extends Controller
         $articles = Article::where('feature_id', $feature->id) 
             ->get();
 
-        $recommends = Article::find([13, 16, 19, 22]);
-        $randoms = Article::inRandomOrder()->take(5)->get();
-        $tags = Tag::all();
-        $categories = Category::all();
-
-
         return view('feature.show', [
             'feature' => $feature,
             'articles' => $articles,
-            'recommends' => $recommends,
-            'randoms' => $randoms,
-            'tags' => $tags,
-            'categories' => $categories
         ]);
     }
 
@@ -148,15 +122,12 @@ class FeatureController extends Controller
             $filename = '';
         }
 
-        // $feature->id = $request->id;
         $feature->feature_name = $request->feature_name;
         $feature->image = basename($filename);
-
 
         $feature->save();
 
         return redirect('/admin/home');
-        
     }
 
     /**
